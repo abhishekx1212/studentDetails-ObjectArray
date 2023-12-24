@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="result"></h1>
+</body>
+
+</html>
+<script>
+    var myOj = {
+        name: 'abhi',
+        address: 'surat',
+        grno: 123,
+        marks: {
+            maths: 10,
+            eng: 20,
+            sci: 30
+        },
+        // fullDetails: function () {
+        //     return this.name;
+        // }
+    }
+
+    /* The block of code inside of the (for...in) loop will be
+       executed once for each property. */
+    let txt = ''
+    for (let i in myOj) {
+        txt += myOj[i] + " ";
+    }
+   
+    document.getElementById('result').innerHTML = txt
+
+    /* other displaying method */
+     // document.getElementById('result').innerHTML = Object.values(myOj)
+
+    /* 2 method */
+    // var student = new Object({
+    //     name: 'abhi',
+    //     address: 'surat',
+    //     grno: 123
+    // })
+    // console.log(student.name, student.grno)
+    
+    /* for eleting property */
+    //for deleting a property
+    // delete student.marks.eng
+</script>
