@@ -2,10 +2,24 @@
     font-family: "Roboto Mono", monospace;
 }
 
+body{
+    background-image:url(../images/i-2.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: black;
+}
+
 .card {
-    background-color: rgba(225, 225, 225, 0.9);
+    background-color: rgba(255, 225, 225, 0.4);
     padding: 15px;
     margin-bottom: 15px;
+    display: inline-block;
+    width: 400px;
+    color: black;
+    border: 1px solid white;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
 }
 
 .card h2 {
@@ -14,5 +28,12 @@
 
 .card span {
     display: block;
-    font-size: 18px;
+    font-size: 20px;
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+    float: right;
+    border-radius: 20px;
 }

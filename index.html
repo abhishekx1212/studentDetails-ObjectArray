@@ -7,40 +7,18 @@
     <title>object array</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
 </head>
 
 <body>
     <div class="container py-4">
-        <div class="row px-2 px-sm-0">
-            <div class="col-12 text-center"><h1>STUDENT DETAILS</h1></div>
-            <div class="col-lg-4">
-                <div id="shop-0"></div>
+        <div class="row px-4 justify-content-center">
+            <div class="col-12 text-center mb-4">
+                <h1 style="color: white;">STUDENT DETAILS</h1>
             </div>
-            <div class="col-lg-4">
-                <div id="shop-1"></div>
+            <div class="col-12">
+                <div id="info"></div>
             </div>
-            <div class="col-lg-4">
-                <div id="shop-2"></div>
-            </div>
-            <div class="col-lg-4">
-                <div id="shop-3"></div>
-            </div>
-            <div class="col-lg-4">
-                <div id="shop-4"></div>
-            </div>
-            <div class="col-lg-4">
-                <div id="shop-5"></div>
-            </div>
-            <!-- <div class="col-4">
-                <div class="card">
-                    <h2>STUDENT-1</h2>
-                    <span>FIRSTNAME: TONY</span>
-                    <span>LASTNAME: STARK</span>
-                    <span>D.O.B: 1-2-1993</span>
-                    <span>AGE: 22 YEARS</span>
-                    <span>ADDRESS: SURAT</span>
-                </div>
-            </div> -->
         </div>
 
     </div>
@@ -56,7 +34,8 @@
             lname: 'LASTNAME: STARK',
             dob: 'D.O.B: 1-2-1993',
             age: 'AGE: 30 YEARS',
-            add: 'ADDRESS: SURAT'
+            add: 'ADDRESS: SURAT',
+            // image: 'assets/images/i-5.jpg'
         },
         {
             title: "STUDENT-2",
@@ -64,7 +43,8 @@
             lname: 'LASTNAME: AMERICA',
             dob: 'D.O.B: 3-4-1992',
             age: 'AGE: 31 YEARS',
-            add: 'ADDRESS: BHARUCH'
+            add: 'ADDRESS: BHARUCH',
+            // image: 'assets/images/i-5.jpg'
         },
         {
             title: "STUDENT-3",
@@ -72,104 +52,23 @@
             lname: 'LASTNAME: ODINSON',
             dob: 'D.O.B: 4-5-1991',
             age: 'AGE: 32 YEARS',
-            add: 'ADDRESS: VADODRA'
-        },
-        {
-            title: "STUDENT-4",
-            fname: 'FIRSTNAME: PETER',
-            lname: 'LASTNAME: PARKER',
-            dob: 'D.O.B: 6-7-1990',
-            age: 'AGE: 33 YEARS',
-            add: 'ADDRESS: ANAND'
-        },
-        {
-            title: "STUDENT-5",
-            fname: 'FIRSTNAME: BLACK',
-            lname: 'LASTNAME: PANTHER',
-            dob: 'D.O.B: 8-9-1989',
-            age: 'AGE: 34 YEARS',
-            add: 'ADDRESS: AMRELI'
-        },
-        {
-            title: "STUDENT-6",
-            fname: 'FIRSTNAME: DOCTOR',
-            lname: 'LASTNAME: STRANGE',
-            dob: 'D.O.B: 10-11-1988',
-            age: 'AGE: 35 YEARS',
-            add: 'ADDRESS: JUNAGADH'
+            add: 'ADDRESS: VADODRA',
+            // image: 'assets/images/i-5.jpg'
         },
     ];
     console.log(student.length)
     for (var i = 0; i < student.length; i++) {
-        if (i == 0) {
-            document.getElementById('shop-0').innerHTML = `
+        document.getElementById('info').innerHTML += `
                  <div class="card">
-                    <h2>${student[0].title}</h2>
-                    <span>${student[0].fname}</span>
-                    <span>${student[0].lname}</span>
-                    <span>${student[0].dob}</span>
-                    <span>${student[0].age}</span>
-                    <span>${student[0].add}</span>
+                    <h2>${student[i].title}</h2>
+                   
+                    <span>${student[i].fname}</span>
+                    <span>${student[i].lname}</span>
+                    <span>${student[i].dob}</span>
+                    <span>${student[i].age}</span>
+                    <span>${student[i].add}</span> 
                  </div>
         `;
-        } else if (i == 1) {
-            document.getElementById('shop-1').innerHTML = `
-                <div class="card">
-                    <h2>${student[1].title}</h2>
-                    <span>${student[1].fname}</span>
-                    <span>${student[1].lname}</span>
-                    <span>${student[1].dob}</span>
-                    <span>${student[1].age}</span>
-                    <span>${student[1].add}</span>
-                </div>
-        `;
-        } else if (i == 2) {
-            document.getElementById('shop-2').innerHTML = `
-                 <div class="card">
-                    <h2>${student[2].title}</h2>
-                    <span>${student[2].fname}</span>
-                    <span>${student[2].lname}</span>
-                    <span>${student[2].dob}</span>
-                    <span>${student[2].age}</span>
-                    <span>${student[2].add}</span>
-                </div>
-        `;
-        }
-        else if (i == 3) {
-            document.getElementById('shop-3').innerHTML = `
-                 <div class="card">
-                    <h2>${student[3].title}</h2>
-                    <span>${student[3].fname}</span>
-                    <span>${student[3].lname}</span>
-                    <span>${student[3].dob}</span>
-                    <span>${student[3].age}</span>
-                    <span>${student[3].add}</span>
-                </div>
-        `;
-        } else if (i == 4) {
-            document.getElementById('shop-4').innerHTML = `
-                <div class="card">
-                    <h2>${student[4].title}</h2>
-                    <span>${student[4].fname}</span>
-                    <span>${student[4].lname}</span>
-                    <span>${student[4].dob}</span>
-                    <span>${student[4].age}</span>
-                    <span>${student[4].add}</span>
-                </div>
-        `;
-        }
-        else if (i == 5) {
-            document.getElementById('shop-5').innerHTML = `
-                 <div class="card">
-                    <h2>${student[5].title}</h2>
-                    <span>${student[5].fname}</span>
-                    <span>${student[5].lname}</span>
-                    <span>${student[5].dob}</span>
-                    <span>${student[5].age}</span>
-                    <span>${student[5].add}</span>
-                 </div>
-        `;
-        }
-
     }
 </script>
+<!-- <img src="${student[i].image}" alt=""> -->
